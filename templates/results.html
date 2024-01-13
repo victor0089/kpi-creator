@@ -5,14 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales KPIs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Sales KPIs</h1>
-    <p>Total Sales: ${{ total_sales }}</p>
-    <p>Average Order Value: ${{ average_order_value }}</p>
-    <p>Total Customers: {{ total_customers }}</p>
-    <p>Conversion Rate: {{ conversion_rate }}%</p>
-    <!-- Add more KPIs as needed -->
+    <div class="container">
+        <h1>Sales KPIs</h1>
+        <div class="kpi">
+            <p>Total Sales:</p>
+            <p>${{ total_sales }}</p>
+        </div>
+        <div class="kpi">
+            <p>Average Order Value:</p>
+            <p>${{ average_order_value }}</p>
+        </div>
+        <div class="kpi">
+            <p>Total Customers:</p>
+            <p>{{ total_customers }}</p>
+        </div>
+        <div class="kpi">
+            <p>Conversion Rate:</p>
+            <p>{{ conversion_rate }}%</p>
+        </div>
+        <!-- Add more KPIs as needed -->
+    </div>
 </body>
 </html>
-
